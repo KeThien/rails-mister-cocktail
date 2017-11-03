@@ -1,0 +1,13 @@
+<h1>cocktails#index</h1>
+<!-- show all cocktails  -->
+<%= link_to "Create", new_cocktail_path, class: "btn btn-primary" %>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li>
+      <p>
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <%= link_to "", cocktail_path(cocktail), method: :delete, class: "fa fa-times"  %>
+      </p>
+    </li>
+  <% end %>
+</ul>

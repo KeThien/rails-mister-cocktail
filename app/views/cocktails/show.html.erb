@@ -1,0 +1,10 @@
+<h1>cocktails#show</h1>
+<h1><%= @cocktail.name %></h1>
+
+<!-- show all doses -->
+
+<p>
+  <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+</p>
+<%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-warning" %>
+<%= link_to "Delete", cocktail_path(@cocktail), method: :delete, class: "btn btn-danger" %>
